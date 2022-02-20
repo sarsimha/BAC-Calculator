@@ -2,10 +2,11 @@
 let person;
 
 document.getElementById("myButton").onclick = function() {
-    sperson = new user(document.getElementById("fname"), 
-        document.getElementById("lname").value, document.getElementById("weight").value, document.getElementById("sex").value,
+    person = new user(document.getElementById("fname"), 
+    document.getElementById("lname").value, document.getElementById("weight").value, document.getElementById("sex").value,
         document.getElementById("timeDrinking").value, document.getElementById("emergencyContact").value, document.getElementById("emergencyName").value) 
     text(person.getFirstName.value);
+    console.log(person.getFirstName)
 
 
 }
