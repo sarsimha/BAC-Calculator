@@ -1,12 +1,12 @@
 localStorage.getItem("person");
-localStorage.getItem("numDrinks");
+let num = localStorage.getItem("numDrinks");
 let totalDrinks =  [];
 
 document.getElementById("bcButton").onclick = function() {
     const d = new Date();
     let time = d.getTime();
     drink = {"Time": time,  "Volume": document.getElementById("Volume").value, "ABV": document.getElementById("ABV").value};
-    numDrinks++;
+    num++;
     totalDrinks.push(drink);
     localStorage.setItem("totaldrinks", JSON.stringify(totalDrinks));
 
