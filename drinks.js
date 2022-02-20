@@ -1,4 +1,3 @@
-// import {person} from './userprof.js';
 localStorage.getItem("person");
 let totalDrinks =  [];
 

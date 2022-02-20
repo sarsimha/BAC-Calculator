@@ -13,7 +13,6 @@ document.getElementById("myButton").onclick = function() {
 
 }
 
-// export {person}
 
 class user{
     constructor(first, last, weight, gender, time, friendName, friendContact) {
