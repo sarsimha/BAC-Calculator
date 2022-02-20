@@ -5,9 +5,11 @@ numDrinks = 0;
 localStorage.setItem("numDrinks", numDrinks);
 
 document.getElementById("myButton").onclick = function() {
+    const d = new Date();
+    let time = d.getTime();
     person = {"fname": document.getElementById("fname"), 
     "lname": document.getElementById("lname").value, "weight": document.getElementById("weight").value, "sex": document.getElementById("sex").value,
-        "time": document.getElementById("timeDrinking").value, "emergency": document.getElementById("emergencyContact").value, "contact": document.getElementById("emergencyName").value }
+        "time": time, "emergency": document.getElementById("emergencyContact").value, "contact": document.getElementById("emergencyName").value }
     console.log(person.fname)
     localStorage.setItem("person". JSON.stringify(person))
 

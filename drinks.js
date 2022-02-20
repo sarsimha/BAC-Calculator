@@ -1,6 +1,6 @@
-localStorage.getItem("person");
 let num = localStorage.getItem("numDrinks");
 let totalDrinks =  [];
+localStorage.setItem("num", num);
 
 document.getElementById("bcButton").onclick = function() {
     const d = new Date();
