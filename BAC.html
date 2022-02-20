@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <script>
+            function showAlertOne() {
+              var myText = "Are you doing okay?? (In finished code there would be a yes no option and 'no' would contact your emergency contact.)";
+              alert (myText);
+        }
+        function showAlertTwo() {
+              var myText = "You should stop drinking soon (In finished code there would be a yes no option and 'no' would contact your emergency contact.)";
+              alert (myText);
+        }
+        function showAlertThree() {
+              var myText = "Your Emergency Contact has Been contacted(In finished code there would be a yes no option and 'no' would contact your emergency contact.)";
+              alert (myText);
+        }
+        </script>
+
         <style>
         h1 {
             background-color: lightblue;
@@ -56,9 +72,35 @@
             opacity: 1;
             right: 0;
           }
+
+          /* The alert message box */
+          .alert {
+                padding: 20px;
+                background-color: #f44336; /* Red */
+                color: white;
+                margin-bottom: 15px;
+              }
+
+              /* The close button */
+              .closebtn {
+                margin-left: 15px;
+                color: white;
+                font-weight: bold;
+                float: right;
+                font-size: 22px;
+                line-height: 20px;
+                cursor: pointer;
+                transition: 0.3s;
+              }
+
+              /* When moving the mouse over the close button */
+              .closebtn:hover {
+                color: black;
+              } 
         </style>
         </head>
     <body>
+        <body onload="showAlert()"> 
 
         <h1> Current Status </h1>
 
@@ -69,10 +111,17 @@
         <div style = "text-align: center;">
         <button onclick= "location.href = 'index.html';" id="myButton" class="float-left submit-button" >Home</button>
         <button onclick= "location.href = 'drinks.html';" id="backButton" class="float-left submit-button" >Add drink</button>
-        <button onclick= "location.href = 'BAC.html';" id="scenario1" class="float-left submit-button" >Scenario 1</button>
-        <button onclick= "location.href = 'BAC.html';" id="scenario2" class="float-left submit-button" >Scenario 2</button>
-        <button onclick= "location.href = 'BAC.html';" id="scenario3" class="float-left submit-button" >Scenario 3</button>
+        <button onclick= "showAlertOne()" id="scenario1" class="float-left submit-button" >Scenario 1</button>
+        <button onclick= "showAlertTwo()" id="scenario2" class="float-left submit-button" >Scenario 2</button>
+        <button onclick= "showAlertThree()" id="scenario3" class="float-left submit-button" >Scenario 3</button>
         <!-- <button onclick= "location.href = 'drinks.html';" id="myButton" class="float-left submit-button" >Submit user information</button> -->
         </div>
+
+        <!-- <div class="alert">
+            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+            <strong>Drink Safe</strong> Senarios are show popup messages that would occur asking the user how they are doing.
+        </div> -->
+
+
     </body>
 </html>
