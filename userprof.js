@@ -1,10 +1,10 @@
 //create a user object
 
 document.getElementById("myButton").onclick = function() {
-    person = new user(document.getElementById("fname"), 
+    let person = new user(document.getElementById("fname"), 
         document.getElementById("lname").value, document.getElementById("weight").value, document.getElementById("sex").value,
         document.getElementById("timeDrinking").value, document.getElementById("emergencyContact").value, document.getElementById("emergencyName").value) 
-        console.log(person.getFirstName);
+    text(person.getFirstName);
 
 
 }
