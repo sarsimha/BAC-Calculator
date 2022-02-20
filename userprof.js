@@ -1,13 +1,16 @@
 //create a user object
+let person;
 
 document.getElementById("myButton").onclick = function() {
-    let person = new user(document.getElementById("fname"), 
+    sperson = new user(document.getElementById("fname"), 
         document.getElementById("lname").value, document.getElementById("weight").value, document.getElementById("sex").value,
         document.getElementById("timeDrinking").value, document.getElementById("emergencyContact").value, document.getElementById("emergencyName").value) 
-    text(person.getFirstName);
+    text(person.getFirstName.value);
 
 
 }
+
+export {person}
 
 class user{
     constructor(first, last, weight, gender, time, friendName, friendContact) {
