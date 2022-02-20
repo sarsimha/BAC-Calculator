@@ -2,6 +2,7 @@
 let person;
 let numDrinks;
 numDrinks = 0;
+localStorage.setItem("numDrinks", numDrinks);
 
 document.getElementById("myButton").onclick = function() {
     person = {"fname": document.getElementById("fname"), 
