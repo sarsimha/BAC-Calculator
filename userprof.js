@@ -1,17 +1,19 @@
 //create a user object
 let person;
+let numDrinks;
+numDrinks = 0;
 
 document.getElementById("myButton").onclick = function() {
-    person = new user(document.getElementById("fname"), 
-    document.getElementById("lname").value, document.getElementById("weight").value, document.getElementById("sex").value,
-        document.getElementById("timeDrinking").value, document.getElementById("emergencyContact").value, document.getElementById("emergencyName").value) 
-    text(person.getFirstName.value);
-    console.log(person.getFirstName)
+    person = {"fname": document.getElementById("fname"), 
+    "lname": document.getElementById("lname").value, "weight": document.getElementById("weight").value, "sex": document.getElementById("sex").value,
+        "time": document.getElementById("timeDrinking").value, "emergency": document.getElementById("emergencyContact").value, "contact": document.getElementById("emergencyName").value }
+    console.log(person.fname)
+    localStorage.setItem("person". JSON.stringify(person))
 
 
 }
 
-export {person}
+// export {person}
 
 class user{
     constructor(first, last, weight, gender, time, friendName, friendContact) {

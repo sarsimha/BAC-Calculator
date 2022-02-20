@@ -1,18 +1,23 @@
 // import {person} from './userprof.js';
+localStorage.getItem("person");
+let totalDrinks =  [];
 
+document.getElementById("bcButton").onclick = function() {
+    const d = new Date();
+    let time = d.getTime();
+    drink = {"Time": time,  "Volume": document.getElementById("Volume").value, "ABV": document.getElementById("ABV").value};
+    numDrinks++;
+    totalDrinks.push(drink);
+    localStorage.setItem("totaldrinks", JSON.stringify(totalDrinks));
 
-
+}
 
 
 class drink {
-    constructor(name, volume, abv) {
-        this.name = name;
+    constructor(time, volume, abv) {
+        this.time = time;
         this.volume = volume;
         this.abv = abv;
-    }
-
-    getName() {
-        return this.name;
     }
 
     getVolume() {
@@ -21,9 +26,5 @@ class drink {
 
     getAbv(){
         return this.abv;
-    }
-
-    getTime(){
-        return person.getTime;
     }
 }
